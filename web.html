@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rangkuman HTML Basic Tag</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        h1 {
+            font-size: 3.5em;
+            text-align: center;
+            color: #fff;
+            margin-top: 50px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            margin-top: 30px;
+            margin-bottom: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        h2 {
+            color: #007BFF;
+            font-size: 2.2em;
+            position: relative;
+        }
+        h2::after {
+            content: '';
+            width: 60px;
+            height: 4px;
+            background: #007BFF;
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+        }
+        .icon {
+            font-size: 1.2em;
+            margin-right: 10px;
+        }
+        p, ul {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        ul {
+            list-style-type: none;
+        }
+        ul li::before {
+            content: "✔️";
+            margin-right: 10px;
+            color: #007BFF;
+        }
+        .code {
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .code pre {
+            margin: 0;
+        }
+        .highlight {
+            background-color: #e3f2fd;
+            padding: 2px 5px;
+            border-radius: 5px;
+        }
+        .image-section {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .image-section img {
+            max-width: 100%;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+        .image-section img:hover {
+            transform: scale(1.05);
+        }
+        .footer {
+            text-align: center;
+            font-style: italic;
+            color: #555;
+            margin-top: 50px;
+        }
+        .cta {
+            background-color: #007BFF;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+            transition: background-color 0.3s ease;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .cta:hover {
+            background-color: #0056b3;
+        }
+        .floating-icon {
+            position: absolute;
+            top: -40px;
+            right: -40px;
+            width: 150px;
+            height: 150px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            z-index: 0;
+            animation: rotate 10s infinite linear;
+        }
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>HTML Basic Tag</h1>
+
+    <div class="container">
+        <div class="floating-icon"></div>
+        
+        <h2><span class="icon">🌐</span> Apa itu HTML?</h2>
+        <p>HTML (<span class="highlight">Hypertext Markup Language</span>) adalah bahasa markup yang digunakan untuk membangun halaman web dan menampilkan informasi di dalam browser. HTML saat ini menjadi standar yang diatur oleh <i>World Wide Web Consortium</i> (W3C).</p>
+
+        <h2><span class="icon">📅</span> Sejarah HTML</h2>
+        <ul>
+            <li>HTML 2.0 disahkan pada 22 September 1995</li>
+            <li>HTML 3.2 diperkenalkan pada 14 Januari 1996</li>
+            <li>HTML 4.0 dirilis pada 18 Desember 1997</li>
+            <li>XHTML 1.0, gabungan HTML dan XML, muncul pada 24 Januari 2000</li>
+        </ul>
+
+        <h2><span class="icon">📄</span> Struktur HTML</h2>
+        <div class="code">
+            <pre>
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Judul Halaman&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        ...konten halaman...
+    &lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+        </div>
+
+        <h2><span class="icon">📑</span> Ciri-Ciri Dokumen HTML</h2>
+        <ul>
+            <span class="icon">📝</span> Memiliki ekstensi file berupa <b>.htm</b> atau <b>.html</b>.
+            <br /><span class="icon">🔤</span> Bersifat <i>non case-sensitive</i>, artinya tag dapat ditulis dalam huruf besar maupun kecil.</li>
+            <br /><span class="icon">🔗</span> Terdiri atas tag pembuka dan penutup, walaupun beberapa tag bisa berdiri sendiri (seperti <code>&lt;br /&gt;</code>).
+            <br /><span class="icon">📚</span> Tag HTML bersifat berpasangan & bersarang, seperti tag <code>&lt;html&gt;</code> yang membungkus seluruh isi dokumen.
+        </ul>
+
+        <h2><span class="icon">🔧</span> Tag HTML Penting</h2>
+        <ul>
+            <li><b>Tag Heading:</b> &lt;h1&gt; sampai &lt;h6&gt; untuk judul dan subjudul</li>
+            <li><b>Tag Paragraf:</b> &lt;p&gt; untuk menulis paragraf</li>
+            <li><b>Tag Gambar:</b> &lt;img src="..." alt="..."&gt; untuk menampilkan gambar</li>
+            <li><b>Tag Hyperlink:</b> &lt;a href="..."&gt;teks link&lt;/a&gt; untuk tautan</li>
+            <li><b>Tag Komentar:</b> &lt;!-- ... --&gt; untuk menyisipkan komentar</li>
+        </ul>
+
+        <h2><span class="icon">🖼️</span> Ilustrasi HTML</h2>
+        <div class="image-section">
+            <img src="download (1).jpg" alt="Aplikasi HTML">
+        </div>
+
+        <div class="footer">
+            <p>HTML adalah fondasi dari pengembangan web modern. Dengan menguasai HTML, Anda bisa membangun situs web dengan struktur yang baik dan tampilan menarik.</p>
+            <a href="#" class="cta">Pelajari Selengkapnya</a>
+        </div>
+    </div>
+
+</body>
+</html>
